@@ -62,3 +62,12 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 
 -- vim: ts=2 sts=2 sw=2 et
+vim.opt.to = false
+vim.g.have_nerd_font = true
+
+vim.cmd.let "&stc='%=%{v:relnum?v:relnum:v:lnum} '"
+vim.opt.rnu = true
+
+vim.opt.gcr = 'n-v-c:block'
+
+vim.cmd 'set nolist'
