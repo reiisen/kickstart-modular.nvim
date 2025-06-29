@@ -45,7 +45,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
---Oil
+-- Oil
 vim.keymap.set('n', 'q', '<CMD>Oil<CR>', { desc = 'Oil' })
+vim.cmd.nnoremap '\\ q'
+
+-- Tab Enter
 
 -- vim: ts=2 sts=2 sw=2 et
