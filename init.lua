@@ -9,4 +9,4 @@ require 'bootstrap'
 
 require 'plugins'
 
-require 'hi'
+require 'colorschemes.none'

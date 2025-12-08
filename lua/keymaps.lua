@@ -26,10 +26,13 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<leader>h', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<leader>l', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<leader>j', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<leader>k', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.keymap.set('n', '<leader>[', '<CMD>vsplit<CR>', { desc = 'Move focus to the upper window' })
+vim.keymap.set('n', '<leader>]', '<CMD>split<CR>', { desc = 'Move focus to the upper window' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -46,7 +49,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Oil
-vim.keymap.set('n', 'q', '<CMD>Oil<CR>', { desc = 'Oil' })
+vim.keymap.set('n', '<Tab>', '<CMD>Oil --float<CR>', { desc = 'Oil' })
 vim.cmd.nnoremap '\\ q'
 
 -- Tab Enter

@@ -37,6 +37,10 @@ require('lazy').setup({
   require 'plugins.gitsigns',
 
   require 'plugins.transparent',
+
+  require 'plugins.latex',
+
+  require 'plugins.terminal',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
@@ -58,5 +62,3 @@ require('lazy').setup({
     },
   },
 })
-
--- vim: ts=2 sts=2 sw=2 et

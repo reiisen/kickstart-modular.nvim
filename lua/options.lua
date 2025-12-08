@@ -71,3 +71,7 @@ vim.opt.rnu = true
 vim.opt.gcr = 'n-v-c:block'
 
 vim.cmd 'set nolist'
+
+vim.opt.wrap = false
+
+vim.opt.guicursor = ''
