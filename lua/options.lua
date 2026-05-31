@@ -80,7 +80,7 @@ vim.opt.guicursor = ''
 
 -- 1. Point Neovim to your custom compiled binary
 vim.treesitter.language.add('latex', {
-  path = vim.fn.expand './parsers/latex.so',
+  path = vim.fn.stdpath 'config' .. '/lua/parsers/latex.so',
 })
 
 -- 2. Tell Neovim that .tex files use this 'latex' parser
