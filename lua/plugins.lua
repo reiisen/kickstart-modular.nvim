@@ -26,21 +26,17 @@ require('lazy').setup({
 
   require 'plugins.todo-comments',
 
-  require 'plugins.treesitter',
-
   require 'plugins.cmp',
 
-  require 'plugins.oil',
+  -- require 'plugins.oil',
+
+  require 'plugins.yazi',
+
+  require 'plugins.transparent',
 
   require 'plugins.autopairs',
 
   require 'plugins.gitsigns',
-
-  require 'plugins.transparent',
-
-  require 'plugins.latex',
-
-  require 'plugins.terminal',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

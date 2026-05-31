@@ -9,4 +9,6 @@ require 'bootstrap'
 
 require 'plugins'
 
-require 'colorschemes.none'
+require 'autocmd'
+
+require 'colorschemes.decaf'

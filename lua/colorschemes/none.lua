@@ -1,8 +1,8 @@
 -- Palette Definitions
 local main_190 = '#BEBEBE' -- Main Text (190/255 Grayscale)
 local detail_255 = '#FFFFFF' -- Details/Numbers (Pure White)
-local coral = '#FF7F50' -- Strings & Imports
-local dimmed = '#555555' -- Comments/Line Numbers (Dimmed to reduce noise)
+local coral = '#bde5e4' -- Strings & Imports
+local dimmed = '#888888' -- Comments/Line Numbers (Dimmed to reduce noise)
 local error_red = '#FF5555'
 
 vim.cmd 'TransparentEnable'

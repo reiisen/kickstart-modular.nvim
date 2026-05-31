@@ -15,9 +15,11 @@ return {
         'size',
         'mtime',
       },
+      -- Floating window configuration
       float = {
+        border = 'rounded', -- <--- THE FIX
         win_options = {
-          winhighlight = 'Normal:Normal,FloatBorder:Normal',
+          winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
         },
         override = function(conf)
           -- make the floating window smaller
@@ -37,16 +39,24 @@ return {
         end,
       },
       confirmation = {
+        border = 'rounded', -- <--- THE FIX
         max_width = 0.8,
         win_options = {
-          winhighlight = 'Normal:Normal,FloatBorder:Normal',
+          winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
         },
       },
       progress = {
+        border = 'rounded', -- <--- THE FIX
         max_width = 0.6,
         win_options = {
-          winhighlight = 'Normal:Normal,FloatBorder:Normal',
+          winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',
         },
+      },
+      ssh = {
+        border = 'rounded', -- <--- THE FIX
+      },
+      keymaps_help = {
+        border = 'rounded', -- <--- THE FIX
       },
       keymaps = {
         ['<Tab>'] = { 'actions.parent', mode = 'n' },
@@ -55,8 +65,7 @@ return {
       },
     },
     -- Optional dependencies
-    dependencies = { 'nvim-tree/nvim-web-devicons' }, -- use if you prefer nvim-web-devicons
-    -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
     lazy = false,
   },
 }

@@ -61,7 +61,7 @@ M.toggle_compiler = function()
     -- GUARD: Stop if we are not in a Tex file!
     -- This prevents you from accidentally trying to compile 'init.lua' with latexmk
     if vim.bo.filetype ~= 'tex' and vim.bo.filetype ~= 'plaintex' then
-      print 'Not a LaTeX file. Go back to your thesis!'
+      print 'Not a LaTeX file.'
       return
     end
     -- Capture the current file path BEFORE switching to the terminal buffer
@@ -95,7 +95,7 @@ M.setup = function()
 
       -- Run tex-fmt on the current file
       -- silent! suppresses annoying "shell returned..." messages
-      vim.cmd('silent !tex-fmt ' .. vim.fn.expand '%')
+      vim.cmd('silent !./tex-fmt ' .. vim.fn.expand '%')
 
       -- Reload the file to show changes
       vim.cmd 'edit'

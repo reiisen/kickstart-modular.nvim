@@ -75,3 +75,18 @@ vim.cmd 'set nolist'
 vim.opt.wrap = false
 
 vim.opt.guicursor = ''
+
+-- NVIM 0.12.0 stuff?
+
+-- 1. Point Neovim to your custom compiled binary
+vim.treesitter.language.add('latex', {
+  path = vim.fn.expand '/home/bak/stuff/tree-sitter-latex/latex.so',
+})
+
+-- 2. Tell Neovim that .tex files use this 'latex' parser
+vim.treesitter.language.register('latex', 'tex')
+
+-- 3. Turn on native folding
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldlevel = 99
